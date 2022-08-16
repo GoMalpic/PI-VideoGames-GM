@@ -1,0 +1,412 @@
+.totalGame{
+  background-image: url("./FondoForm.jpg");
+  position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.gameForm {
+  columns: 2;
+    color: white;
+    padding: 10rem;
+}
+
+.input {
+  color: white;
+  background-color: #484848b0;
+  max-width: 190px;
+  height: 20px;
+  padding: 10px;
+  text-align: center;
+  border: 2px solid white;
+  border-radius: 5px;
+  box-shadow: 3px 3px 2px rgb(132, 0, 255);
+}
+
+.input:focus {
+  color: rgb(0, 255, 255);
+  background-color: #212121;
+  outline-color: rgb(0, 255, 255);
+  box-shadow: -3px -3px 15px rgb(0, 255, 255);
+  transition: .1s;
+  transition-property: box-shadow;
+}
+
+.descriptionText {
+  box-sizing: border-box;
+  position: relative;
+  top: -15px;
+  color: white;
+  
+}
+
+.allTextForm {
+  font-size: 42px;
+  justify-content: center;
+}
+
+.descriptionGame {
+  color: white;
+  background-color: #484848b0;
+  max-width: 190px;
+  height: 20px;
+  padding: 10px;
+  text-align: center;
+  border: 2px solid white;
+  border-radius: 5px;
+  box-shadow: 3px 3px 2px rgb(132, 0, 255);
+}
+
+.descriptionGame:focus {
+  color: rgb(0, 255, 255);
+  background-color: #212121;
+  outline-color: rgb(0, 255, 255);
+  box-shadow: -3px -3px 15px rgb(0, 255, 255);
+  transition: .1s;
+  transition-property: box-shadow;
+}
+
+
+
+.buttonInput {
+  --glow-color: rgb(217, 176, 255);
+  --glow-spread-color: rgba(191, 123, 255, 0.781);
+  --enhanced-glow-color: rgb(231, 206, 255);
+  --btn-color: rgb(100, 61, 136);
+  border: .25em solid var(--glow-color);
+  padding: 1em 3em;
+  color: var(--glow-color);
+  font-size: 20px;
+  font-weight: bold;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 0 1em .25em var(--glow-color),
+         0 0 4em 1em var(--glow-spread-color),
+         inset 0 0 .75em .25em var(--glow-color);
+  text-shadow: 0 0 .5em var(--glow-color);
+  position: relative;
+  transition: all 0.3s;
+ }
+ 
+ .buttonInput::after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--glow-spread-color);
+  filter: blur(2em);
+  opacity: .7;
+  transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+ }
+ 
+ .buttonInput:hover {
+  color: var(--btn-color);
+  background-color: var(--glow-color);
+  box-shadow: 0 0 1em .25em var(--glow-color),
+         0 0 4em 2em var(--glow-spread-color),
+         inset 0 0 .75em .25em var(--glow-color);
+ }
+ 
+ .buttonInput:active {
+  box-shadow: 0 0 0.6em .25em var(--glow-color),
+         0 0 2.5em 2em var(--glow-spread-color),
+         inset 0 0 .5em .25em var(--glow-color);
+ }
+
+
+/* .gameForm {
+    display: grid;
+    margin-top: 10rem;
+    color: white;
+    height: 85vh;
+    min-width: 450px;
+    gap: 20px;  
+    grid-template-columns: 900px  1000px;
+    grid-template-areas:
+        "one    two"                
+        "three  three";
+    grid-template-rows: 850px 6rem;
+    padding: 1rem;
+    justify-content: center;
+    background-image: url("https://img.freepik.com/vector-gratis/pantalla-cine-led-verde_42077-1078.jpg");
+    background-size: cover;
+    border-radius: 20px;
+}
+
+.firtPart{
+    margin-top: 1rem;
+    grid-area: one;
+    display: grid;
+}
+
+.secondPart{
+  display: grid;
+  margin-top: 1rem;
+  grid-area: two;
+  justify-content: center;
+  justify-items: center;
+  height: auto;
+}
+
+.submitForm{
+  grid-area: three;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.boton {
+  cursor: pointer;
+  width: 30%;
+  height: 4rem;
+  background: #eb94d0;
+  background-image: -webkit-linear-gradient(top, #131001, #f5f5eb);
+  background-image: -moz-linear-gradient(top, #080501, #f3f3f1);
+  background-image: -ms-linear-gradient(top, #110801, #f1f1e4);
+  background-image: -o-linear-gradient(top, #140702, #e9ebe4);
+  background-image: linear-gradient(to bottom, #0a0501, #fcfcf8);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28; 
+  border-radius: 28px;
+  text-shadow: 3px 2px 1px #a2a5ad;
+  -webkit-box-shadow: .6rem .5rem 2rem #464242;
+  -moz-box-shadow: 6rem .5rem 2rem #292626;
+  box-shadow: 6rem .5rem 2rem #181616;
+  font-family: Arial;
+  color: #000a01;
+  font-size: 2rem;;
+  text-decoration: none;
+}
+
+.boton:hover {
+  color: #e7f5e8;
+  background: #2079b0;
+  background-image: -webkit-linear-gradient(top, #3a2304, #c8d416);
+  background-image: -moz-linear-gradient(top, #3d3504, #c9d60f);
+  background-image: -ms-linear-gradient(top, #a1821b, #a9d40b);
+  background-image: -o-linear-gradient(top, #c79b09, #e2de02);
+  background-image: linear-gradient(to bottom, #3d3506, #b0d410);
+  text-decoration: none;
+}
+
+.otherDats{
+  display: grid;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  justify-self: unset;
+}
+  
+.textRating, .textReleased {
+  width: 90%;
+  height: 40px;
+  font-size: 2rem;
+  border-radius: 5px;
+  border: 1px solid #39c;
+  
+}
+
+.errorForm, .errorDisplay {
+  display: flex;
+  justify-content: center;
+}
+.errorRating, .errorReleased{
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem;
+    color: #ffffff;
+    width: 90%;
+    text-align: center;    
+    background-color: #f80909;
+}
+  
+.gameForm input[type=submit] {
+  grid-area: three;
+  height: 4rem;
+  width: 40%;
+  font-size: 25px;
+}
+  
+  textarea {
+    width: 90%;
+    font-size: 1.3rem;
+    height: 4rem;
+    resize:vertical;
+    margin-top: 6px;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    border: 1px solid #39c;
+  }
+  
+  .gameForm select {
+    background-color: aliceblue;
+    color: black;
+    font-weight: bold;
+    max-width: 100%;
+    height: 3rem; 
+    font-size: 1.5rem;
+    border-radius: 5px;
+    border: 1px solid #39c;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: rgb(246, 248, 245);
+    padding: .5rem;
+  }
+  
+  .botones{
+    width: 100%;
+    justify-content: center;
+  }
+
+  .boton{
+    display: flex;
+    width: 95%;
+    justify-content: center;
+  }
+  .dataGenres , .dataPlatforms {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    margin-top: .5rem;
+    gap: 1rem;
+    font-size: 1.1rem;
+    justify-content:center;
+    align-items: center;
+  }
+  .errorGenres, .errorPlatforms {
+    font-size: 1.8rem;
+    color: #ffffff;
+    width: 100%;
+    text-align: center;
+    background-color: #f8290e;
+  }
+
+  .genres-item , .platform-item {
+    align-items: center;
+    padding: .7rem;
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+    min-width: 200px;
+    margin: .8rem;
+    margin-top: .8rem;
+    border-radius: 10px;
+    background: #eb94d0;
+    background-image: -webkit-linear-gradient(top, #685905, #c5c210);
+    background-image: -moz-linear-gradient(top, #6b4307, #d4c818);
+    background-image: -ms-linear-gradient(top, #904406, #c5c214);
+    background-image: -o-linear-gradient(top, #9c3710, #b1d123);
+    background-image: linear-gradient(to bottom, #d16b0c, #b3b020);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28; 
+    border-radius: 10px;
+    text-shadow: 3px 2px 1px #a2a5ad;
+    -webkit-box-shadow: .6rem .5rem 2rem #464242;
+    -moz-box-shadow: 6rem .5rem 2rem #292626;
+    box-shadow: 6rem .5rem 2rem #181616;
+    font-family: Arial;
+    color: #000a01;
+    font-size: 1.2rem;;
+    text-decoration: none;
+  }
+  
+  .gameName, .gameNewImage, .descriptionGame {
+    width: 90%;
+    font-weight: bold;
+    border-radius: 2px;
+    font-size: 2rem;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+  
+  }
+
+  .descriptionGame {
+    height: 100px;
+  }
+  
+  .errorName, .errorImage, .errorDescription {
+    font-size: 1.8rem;
+    color: #ffffff;
+    width: 90%;
+    text-align: center;
+    background-color: #fd0707;
+    margin: 0;
+    padding: 0%;
+  }
+  
+  @media (max-width: 2000px) {
+    .gameForm {
+      grid-template-columns: 1800px;
+      grid-template-areas:
+          "one"
+          "two"                
+          "three";
+      grid-template-rows: auto auto auto;
+      justify-content: center;
+      height: auto;
+    }
+    .dataGenres , .dataPlatforms {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; 
+    }
+  }
+  @media (max-width: 1600px) {
+    .gameForm {
+      display: grid;
+      grid-template-columns: 1400px;
+      grid-template-areas:
+          "one"
+          "two"                
+          "three";
+      grid-template-rows: auto auto auto;
+      justify-content: center;
+    }
+    .gameName, .gameNewImage, .descriptionGame {
+      width: 70%;
+    }
+  
+    .errorName, .errorImage, .errorDescription {
+      width: 70%;
+    }
+    .dataGenres , .dataPlatforms {
+      grid-template-columns: 1fr 1fr 1fr 1fr; 
+    }
+
+  }
+
+  @media (max-width: 1200px) {
+    .gameForm {
+      display: grid;
+      grid-template-columns: 900px;
+      grid-template-areas:
+          "one"
+          "two"                
+          "three";
+      grid-template-rows: auto auto auto;
+    }
+    .gameName, .gameNewImage, .descriptionGame, .errorName, .errorImage, .errorDescription {
+      width: 70%;
+    }
+    .dataGenres , .dataPlatforms {
+      grid-template-columns: 1fr 1fr; 
+    }
+  }
+
+  @media (max-width: 700px) {
+    .dataGenres , .dataPlatforms {
+      grid-template-columns: 1fr; 
+    }
+    .gameName, .gameNewImage, .descriptionGame, .errorName, .errorImage, .errorDescription {
+      width: 60%;
+    }
+  } */

@@ -1,0 +1,28 @@
+.allPagination {
+  box-sizing: border-box;
+  padding-left: 70px;
+}
+
+.pagination button {
+  font-size: 18px;
+  margin: 0 4px;
+  cursor: pointer;
+}
+
+.titlePag {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  color: rgb(255, 136, 0);
+}
+
+.pageItem {
+  border: 1px solid burlywood;
+  border-radius: 5px;
+  padding: 6px;
+}
+
+.activeButton {
+  background-color: rgb(255, 136, 0);
+  color: rgb(0, 0, 0);
+}
